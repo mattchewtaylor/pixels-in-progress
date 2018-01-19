@@ -1,33 +1,17 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  {{ content }}
-
-  <div class="pb5 ph3">
-
-
-
-    <div class="list pl0 measure-wide center lh-copy">
-      {% for post in site.posts %}
-      <a class="db no-underline black dim" href="{{ post.url | relative_url }}">
-        <div class="fl w-90 bb b--light-gray pointer">
-          <h1 class="f3 pa0 mt5 mb0">
-            {{ post.title | escape }}
-          </h1>
-          <div class="fs-normal lh-copy mid-gray">
-            {{ post.excerpt }}
-          </div>
-          {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-          <span class="no-underline fw5 f5 mb4 dib">{{ post.date | date: '%B %d, %Y' }}</span>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-
-    <div class="cf"></div>
-
-  </div>
+<div class="measure-wide center list pl0">
+  <h2 class="f3 tc fw4 pa3 mv0">Writing</h2>
+  {% for post in site.posts %}
+  <ul class="list pl0">
+    <a class="db no-underline black dim" href="{{ post.url | relative_url }}">
+      <li class="pv3 bb b--black-10">
+        <h1 class="f3 pa0 mb0">{{ post.title | escape }}</h1>
+        {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+        <span class="no-underline fw5 f5 mb4 dib">{{ post.date | date: '%B %d, %Y' }}</span>
+      </li>
+    </a>
+  </ul>
+  {% endfor %}
 </div>
