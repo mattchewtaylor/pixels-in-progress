@@ -1,7 +1,64 @@
 <footer class="bg-near-black white-80 pv5 pv6-l ph4 ph5-l">
-  <p class="f6"><span class="dib mr4 mr5-ns ph2">©2018 Pixels in Progress</span>
-    <a class="link white-80 hover-light-purple" href="/terms">Terms</a> /
-    <a class="link white-80 hover-gold" href="/privacy"> Privacy </a> /
-    <a class="link white-80 hover-green" href="#">hi@yourcompany.com </a>
-  </p>
+  <div class="footer-container">
+
+    <form action="https://thisisnotnormal.createsend.com/t/d/s/fvlul/" method="post" id="subForm">
+      <p>
+        <input id="fieldEmail" class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" placeholder="Your Email Address" name="cm-fvlul-fvlul" type="email" required />
+      </p>
+      <p>
+        <button class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit">Subscribe</button>
+      </p>
+    </form>
+  </div>
+
+  <div class="social-container">
+    <a class="" href="#"><img width="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/medium.svg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dribbble.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dribbble.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
+    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
+  </div>
+
+  <p class="f6"><span class="dib mr4 mr5-ns ph2">©2018 Pixels in Progress</span></p>
+
+  <script>
+  /*
+  * Replace all SVG images with inline SVG
+  */
+  jQuery('img.svg').each(function(){
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    jQuery.get(imgURL, function(data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = jQuery(data).find('svg');
+
+        // Add replaced image's ID to the new SVG
+        if(typeof imgID !== 'undefined') {
+            $svg = $svg.attr('id', imgID);
+        }
+        // Add replaced image's classes to the new SVG
+        if(typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass+' replaced-svg');
+        }
+
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr('xmlns:a');
+
+        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+        }
+
+        // Replace image with new SVG
+        $img.replaceWith($svg);
+
+    }, 'xml');
+
+  });
+  </script>
 </footer>

@@ -3,6 +3,8 @@ layout: default
 ---
 <div class="measure-wide center list pl0 pa3">
   <h2 class="f3 tc fw4 pa3 mv0">Writing</h2>
+  <p class="f3 tc fw4 pa3 mv0">We document our process, our struggles, and our sucesses. Read on if you want to learn with us.</p>
+  <p class="f3 tc fw4 pa3 mv0">Get notified twice a month about what we're up to </p>
   {% for post in site.posts %}
   <ul class="list pl0">
     <a class="db no-underline black dim" href="{{ post.url | relative_url }}">
@@ -14,4 +16,5 @@ layout: default
     </a>
   </ul>
   {% endfor %}
+
 </div>

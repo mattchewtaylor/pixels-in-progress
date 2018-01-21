@@ -4,7 +4,8 @@
 
 @import "tachyons.min.css";
 
-/********************
+/******
+**************
 OVERRIDES
 ********************/
 
@@ -48,6 +49,46 @@ Portfolio Overlay
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+
+.social-container {
+  width: 100%;
+  float: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 30px;
+}
+
+.social-container a {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.person {
+  position: relative;
+}
+
+.headshot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.icon path{
+  fill: white;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .social-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* END Portfolio Overlay */
