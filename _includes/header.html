@@ -5,13 +5,25 @@
     {% assign page_paths = site.header_pages | default: default_paths %}
 
     {% if page_paths %}
-    <nav class="db dt-l w-100 bb pa4 ph5-l">
-      <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l ph2 mb2 mb0-l" href="/" title="Home">Pixels in Progress</a>
+    <nav class="db dt-l w-100 bb pa3 ph5-l">
+      <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l ph2 mb2 mb0-l" href="/" title="Home">
+        <svg style="padding-top: 4px;" width="40px" height="48px" viewBox="0 0 40 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="pixels-in-progress-logo-v2">
+                  <g id="logo">
+                      <path d="M4,0 L16,0 L16,12 L4,12 L4,0 Z M4,12 L16,12 L16,24 L4,24 L4,12 Z M16,0 L28,0 L28,12 L16,12 L16,0 Z M28,0 L40,0 L40,12 L28,12 L28,0 Z M28,12 L40,12 L40,24 L28,24 L28,12 Z M28,24 L40,24 L40,36 L28,36 L28,24 Z M16,24 L28,24 L28,36 L16,36 L16,24 Z" id="Combined-Shape" fill="#A0FF9D"></path>
+                      <path d="M0,36 L4,36 L4,40 L0,40 L0,36 Z M4,32 L8,32 L8,36 L4,36 L4,32 Z M0,24 L4,24 L4,28 L0,28 L0,24 Z M8,24 L12,24 L12,28 L8,28 L8,24 Z M12,24 L16,24 L16,28 L12,28 L12,24 Z M4,28 L8,28 L8,32 L4,32 L4,28 Z M12,28 L16,28 L16,32 L12,32 L12,28 Z M8,32 L12,32 L12,36 L8,36 L8,32 Z M12,32 L16,32 L16,36 L12,36 L12,32 Z" id="Combined-Shape" fill="#56FF50"></path>
+                      <path d="M8,36 L12,36 L12,40 L8,40 L8,36 Z M12,36 L16,36 L16,40 L12,40 L12,36 Z M8,40 L12,40 L12,44 L8,44 L8,40 Z M12,40 L16,40 L16,44 L12,44 L12,40 Z M8,44 L12,44 L12,48 L8,48 L8,44 Z M4,40 L8,40 L8,44 L4,44 L4,40 Z M4,44 L8,44 L8,48 L4,48 L4,44 Z M12,44 L16,44 L16,48 L12,48 L12,44 Z" id="Combined-Shape" fill="#A0FF9D"></path>
+                  </g>
+              </g>
+          </g>
+        </svg>
+      </a>
       <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
         <a class="link dim dark-gray f5 dib mr3 mr4-l" href="/" title="Projects">Projects</a>
         <a class="link dim dark-gray f5 dib mr3 mr4-l" href="/about" title="About">About</a>
         <a class="link dim dark-gray f5 dib mr3 mr4-l" href="/writing" title="Writing">Writing</a>
-        <a class="br-pill bg-green ph3 pv2 link dim white f5 dib mr2" href="/mailing-list" title="Mailing List">Subscribe</a>
+        <a class="bg-light-green hover-bg-green glow ph3 pv2 link white f5 dib mr2" href="/mailing-list" title="Mailing List">Subscribe</a>
       </div>
     </nav>
     {% endif %}

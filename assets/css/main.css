@@ -2,12 +2,25 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "tachyons.min.css";
+@import "tachyons.css";
 
 /******
 **************
 OVERRIDES
 ********************/
+
+
+/**********
+NAV
+**********/
+.glow {
+  transition: all .25s ease-in-out;
+}
+
+.glow:hover {
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,.075);
+  transition: all .25s ease-in-out;
+}
 
 /**********
 HOMEPAGE
@@ -50,6 +63,10 @@ Portfolio Overlay
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+
+/*****
+END Portfolio Overlay
+*****/
 
 
 .social-container {
