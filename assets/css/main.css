@@ -3,23 +3,62 @@
 ---
 
 @import "tachyons.css";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-/******
-**************
+/********************
 OVERRIDES
+********************/
+
+.margin-fix {
+  margin: 0 -8px 0 -8px;
+}
+
+/********************
+ADDONS
+1.) TYPE
+2.) COLOR
 ********************/
 
 
 /**********
-NAV
+1.) TYPE
 **********/
-.glow {
-  transition: all .25s ease-in-out;
+
+/* https://joebrogers.itch.io/bitpotion */
+@font-face {
+  font-family: 'BitPotion';
+  src: url('../fonts/BitPotion.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
-.glow:hover {
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,.075);
-  transition: all .25s ease-in-out;
+.bit-potion {
+  font-family: 'BitPotion',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.sans-serif {
+  font-family: 'Lato',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 400;
+}
+
+/**********
+2.) COLOR
+**********/
+
+.pip-purple {
+  color: #202EBA;
+}
+
+.bg-pip-purple, .hover-bg-pip-purple:hover {
+  background-color: #202EBA;
+}
+
+.pip-purple-light {
+  color: #5562E5;
+}
+
+.bg-pip-purple-light, .hover-bg-pip-purple-light:hover {
+  background-color: #5562E5;
 }
 
 /**********
