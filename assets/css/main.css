@@ -54,11 +54,31 @@ ADDONS
 }
 
 .pip-purple-light {
-  color: #5562E5;
+  color: #6976FE;
 }
 
 .bg-pip-purple-light, .hover-bg-pip-purple-light:hover {
-  background-color: #5562E5;
+  background-color: #6976FE;
+}
+
+/**********
+3.) HOVER INTERACTIONS
+**********/
+
+.btn-sub {
+  box-shadow: 2px 6px 10px 0 rgba(11,23,150,.45);
+  transition: all .25s ease-in-out;
+}
+
+.btn-sub:hover {
+  background-color: #0A1796;
+  box-shadow: 0 0 0 0 rgba(11,23,150,.0);
+  transition: all .25s ease-in-out;
+}
+
+#big-p:hover {
+  fill: #0A1796;
+  transition: all .25s ease-in-out;
 }
 
 /**********
