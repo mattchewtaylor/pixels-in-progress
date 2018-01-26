@@ -45,25 +45,31 @@ ADDONS
 2.) COLOR
 **********/
 
-.pip-purple {
-  color: #202EBA;
-}
 
-.pip-purple-dark {
-  color: #0A1796;
-}
-
-.bg-pip-purple, .hover-bg-pip-purple:hover {
-  background-color: #202EBA;
-}
-
-.pip-purple-light {
+.pip-purple-light, .hover-pip-purple-light:hover {
   color: #6976FE;
 }
 
 .bg-pip-purple-light, .hover-bg-pip-purple-light:hover {
   background-color: #6976FE;
 }
+
+.pip-purple, .hover-pip-purple:hover {
+  color: #202EBA;
+}
+
+.bg-pip-purple, .hover-bg-pip-purple:hover {
+  background-color: #202EBA;
+}
+
+.pip-purple-dark, .hover-pip-purple-dark:hover {
+  color: #0A1796;
+}
+
+.bg-pip-purple-dark, .hover-bg-pip-purple-dark:hover {
+  color: #0A1796;
+}
+
 
 /**********
 3.) HOVER INTERACTIONS
