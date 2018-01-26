@@ -49,6 +49,10 @@ ADDONS
   color: #202EBA;
 }
 
+.pip-purple-dark {
+  color: #0A1796;
+}
+
 .bg-pip-purple, .hover-bg-pip-purple:hover {
   background-color: #202EBA;
 }
@@ -104,17 +108,20 @@ Portfolio Overlay
   width: auto;
   opacity: 0;
   transition: .5s ease;
-  background-color: #000;
+  background-color: #202EBA;
+}
+
+.overlay-pending {
+  background-color: #FFFFFF;
 }
 
 .overlay-pending,
 .container:hover .overlay-complete {
-  opacity: .8;
+  opacity: .9;
 }
 
 .text {
-  color: gray;
-  font-size: 20px;
+  width: 75%;
   position: absolute;
   top: 50%;
   left: 50%;
