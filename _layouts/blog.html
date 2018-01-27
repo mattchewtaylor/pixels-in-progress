@@ -3,11 +3,11 @@ layout: default
 ---
 <div class="pa4 pt0-l ph0-l pb5-l measure-ultra-wide center">
   <p class="f3 bit-potion pip-purple tc">WRITING</p>
-  <h1 class="f2 tl near-black">The Pixelexicon.</h1>
+  <h1 class="f2 tl near-black lh-title">The Pixelexicon.</h1>
   <p class="f4 tl lh-copy mid-gray">The bread and butter of the whole operation. This is where we document our processes, our struggles, and our successes. Read on and learn with us. Native blog coming soon!</p>
   {% for post in site.posts %}
   <ul class="list pl0">
-    <a class="db no-underline near-black dim" href="{{ post.url | relative_url }}">
+    <a class="db no-underline near-black dim" href="{{ post.medium-url }}">
       <li class="pv2 bb b--black-10">
         <h1 class="f4 pa0 mb0">{{ post.title | escape }}</h1>
         {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
@@ -16,5 +16,4 @@ layout: default
     </a>
   </ul>
   {% endfor %}
-
 </div>
