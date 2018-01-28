@@ -6,7 +6,7 @@
 
     {% if page_paths %}
     <nav class="db dt-l w-100 pa3 ph5-l">
-      <a class="db dtc-l v-mid mid-gray link w-100 w-25-l tc tl-l mb2 mb0-l" href="/" title="Home">
+      <a id="logo" class="db dtc-l v-mid mid-gray link w-100 w-25-l tc tl-l mb3 mb0-l" href="/" title="Home">
         <svg style="padding-top: 4px;" width="40px" height="48px" viewBox="0 0 40 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M4,32 L8,32 L8,36 L4,36 L4,32 Z M0,36 L4,36 L4,40 L0,40 L0,36 Z M4,28 L8,28 L8,32 L4,32 L4,28 Z M0,24 L4,24 L4,28 L0,28 L0,24 Z M8,32 L12,32 L12,36 L8,36 L8,32 Z M8,24 L12,24 L12,28 L8,28 L8,24 Z M12,32 L16,32 L16,36 L12,36 L12,32 Z M12,28 L16,28 L16,32 L12,32 L12,28 Z M12,24 L16,24 L16,28 L12,28 L12,24 Z" id="little-p" fill="#6976FE">
           </path>
@@ -15,9 +15,19 @@
         </svg>
       </a>
       <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-        <a class="link dim mid-gray f4 dib mr3 mr4-l" href="/" title="Projects">Projects</a>
-        <a class="link dim mid-gray f4 dib mr3 mr4-l" href="/about" title="About">About</a>
-        <a class="link dim mid-gray f4 dib" href="/writing" title="Writing">Writing</a>
+        {% if page.url == '/about/' %}
+        <a class="link mid-gray f4 hover-link-underline dib mr3 mr4-l" href="/" title="Projects">Projects</a>
+        <a class="link pip-purple link-underline f4 dib mr3 mr4-l" href="/about" title="About">About</a>
+        <a class="link mid-gray f4 hover-link-underline dib" href="/writing" title="Writing">Writing</a>
+        {% elsif page.url == '/writing/' %}
+        <a class="link mid-gray f4 hover-link-underline dib mr3 mr4-l" href="/" title="Projects">Projects</a>
+        <a class="link mid-gray f4 hover-link-underline dib mr3 mr4-l" href="/about" title="About">About</a>
+        <a class="link dim pip-purple link-underline f4 dib" href="/writing" title="Writing">Writing</a>
+        {% else %}
+        <a class="link pip-purple link-underline f4 dib mr3 mr4-l" href="/" title="Projects">Projects</a>
+        <a class="link mid-gray f4 hover-link-underline dib mr3 mr4-l" href="/about" title="About">About</a>
+        <a class="link mid-gray f4 hover-link-underline dib" href="/writing" title="Writing">Writing</a>
+        {% endif %}
       </div>
     </nav>
     {% endif %}

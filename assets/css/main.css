@@ -72,7 +72,7 @@ ADDONS
 
 
 /**********
-3.) HOVER INTERACTIONS
+3.) BTN + LINK INTERACTIONS
 **********/
 
 .btn-hover {
@@ -86,21 +86,32 @@ ADDONS
   transition: all .25s ease-in-out;
 }
 
-#big-p:hover {
+#logo:hover #big-p {
   fill: #0A1796;
   transition: all .25s ease-in-out;
 }
 
-/**********
-HOMEPAGE
-**********/
+.link-underline {
+  border-bottom: 2px solid rgba(32,46,186,1); padding-bottom: .1rem; text-decoration: none;
+}
+
+.link-underline:hover {
+  color: #0A1796;
+}
+
+.hover-link-underline:hover {
+  color: #6976FE;
+  border-bottom: 2px solid rgba(105,118,253,1); padding-bottom: .1rem; text-decoration: none;
+  transition: all .15s ease-in-out;
+}
 
 /*****
-Portfolio Overlay
+PROJECT OVERLAY
 *****/
 
 .container {
   position: relative;
+  overflow: hidden;
 }
 
 .overlay-pending,
@@ -124,6 +135,16 @@ Portfolio Overlay
 .overlay-pending,
 .container:hover .overlay-complete {
   opacity: .9;
+}
+
+.container img {
+  transition: all 0.4s ease 0s, margin 0.4s ease 0s;
+  transform: scale(1, 1);
+}
+
+.container:hover img {
+  transition: all 0.4s ease 0s, margin 0.4s ease 0s;
+  transform: scale(1.1, 1.1);
 }
 
 .text {

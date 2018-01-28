@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  A Weather App
-permalink: "/a-weather-app/"
+permalink: "projects/a-weather-app/"
 medium-url:
   - https://www.medium.com
   - https://www.google.com
@@ -10,20 +10,10 @@ medium-url:
   <div class="tl w-75-ns">
     <h1 class="f2 near-black lh-title">A Weather App for total noobs.</h2>
     <p class="f4 tl lh-copy mid-gray">Our 'Hello World' for Pixels in Progress. To get the ball rolling, we tackled a weather app to end all weather apps.</p>
-    <p class="f6 tl lh-copy pip-purple-light">In the Pixelexicon:</p>
-    {% assign featuredPosts = site.posts | where: 'featured', 'a-weather-app' %}
-    {% for post in featuredPosts %}
-    <ul class="list pl3">
-      <a class="db no-underline near-black dim" href="{{ post.medium-url }}">
-        <li class="pv0">
-          <h1 class="f4 pa0 mb0">{{ post.title | escape }}</h1>
-          {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-          <span class="f3 bit-potion pip-purple mb3 dib">{{ post.date | date: '%B %d, %Y' | upcase }}</span>
-        </li>
-      </a>
-    </ul>
-    {% endfor %}
-    <a class="link f3 button-reset pv3 ph3 bn bg-pip-purple btn-hover bg-animate bit-potion white pointer" href="#0">CHECK IT OUT</a>
+    {% include featured-posts.html %}
+    <div class="mv3 db">
+      <a class="link f3 pv3 ph3 bn bg-pip-purple btn-hover bg-animate bit-potion white pointer" href="#0">CHECK IT OUT</a>
+    </div>
   </div>
   <div class="mw6">
     <img src="http://tachyons.io/img/iPhone7Vertical.jpg">
