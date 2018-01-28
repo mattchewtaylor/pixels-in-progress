@@ -1,64 +1,35 @@
-<footer class="bg-near-black white-80 pv5 pv6-l ph4 ph5-l">
-  <div class="footer-container">
-
-    <form action="https://thisisnotnormal.createsend.com/t/d/s/fvlul/" method="post" id="subForm">
-      <p>
-        <input id="fieldEmail" class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns" placeholder="Your Email Address" name="cm-fvlul-fvlul" type="email" required />
-      </p>
-      <p>
-        <button class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns" type="submit">Subscribe</button>
-      </p>
-    </form>
+<footer class="pa4 pa5-l bg-pip-purple-light">
+  <div class="mb4-l cf">
+    <p class="bit-potion pip-purple fl w-100 w-50-l pv0 f3 fw6 ttu tracked mb4">GOT ANY IDEAS?</p>
   </div>
-
-  <div class="social-container">
-    <a class="" href="#"><img width="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/medium.svg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dribbble.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/dribbble.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" /><img class="headshot" src="assets/matt.jpg" /></a>
-    <a class="link person" href="#"><img class="icon" width="40" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" /><img class="headshot" src="assets/nitin.jpg" /></a>
+  <section class="mb5 dt dt--fixed w-100">
+    <div class="dtc-l db mb4 mb4-m mb0-ns v-mid">
+      <a class="white f3 f3-m f2-ns fw6 dtc link dim dib mr0 mt2 mb4 mb0-l" href="mailto:hi@pixelsinprogress.co">
+      hi@pixelsinprogress.co
+      </a>
+    </div>
+    <div class="dtc-l db mb0-ns cf">
+      <label class="clip" for="email-address">Email Address</label>
+      <input class="f3 input-reset bn fl black-80 bg-white bit-potion pa3 w-100 w-75-m w-80-l" placeholder="ENTER YOUR EMAIL" type="email" required name="email-address" value="" id="fieldEmail" />
+      <input class="f3 button-reset fl pv3 tc bn bg-animate bg-pip-purple btn-hover bit-potion white pointer w-100 w-25-m w-20-l" type="submit" value="SUBSCRIBE" />
+    </div>
+  </section>
+  <div class="dt dt--fixed w-100" >
+    <div class="dn dtc-ns v-mid">
+      <p class="f6 white dib pr3 mb3">
+        © 2018
+      </p>
+    </div>
+    <div class="db dtc tr v-mid f5 f4-ns">
+      <a href="https://twitter.com/Nitinsampathi" class="pip-purple hover-pip-purple-dark link dib mr3" title="Nitin's Twitter">
+        @Nitinsampathi
+      </a>
+      <a href="https://twitter.com/mattchewtaylor" class="pip-purple hover-pip-purple-dark link dib mr3" title="Matt's Twitter">
+        @mattchewtaylor
+      </a>
+      <a href="https://medium.com/pixels-in-progress" class="pip-purple hover-pip-purple-dark link dib" title="Pixels in Progress on Medium">
+        Medium
+      </a>
+    </div>
   </div>
-
-  <p class="f6"><span class="dib mr4 mr5-ns ph2">©2018 Pixels in Progress</span></p>
-
-  <script>
-  /*
-  * Replace all SVG images with inline SVG
-  */
-  jQuery('img.svg').each(function(){
-    var $img = jQuery(this);
-    var imgID = $img.attr('id');
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    jQuery.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = jQuery(data).find('svg');
-
-        // Add replaced image's ID to the new SVG
-        if(typeof imgID !== 'undefined') {
-            $svg = $svg.attr('id', imgID);
-        }
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-            $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-    }, 'xml');
-
-  });
-  </script>
 </footer>
