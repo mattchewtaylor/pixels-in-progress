@@ -133,7 +133,9 @@ PROJECT OVERLAY
   background-color: #FFFFFF;
 }
 
-.overlay-pending,
+.overlay-pending {
+  opacity: .9;
+}
 .container:hover .overlay-complete {
   opacity: .9;
 }
