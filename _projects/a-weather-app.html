@@ -2,21 +2,48 @@
 layout: default
 title:  A Weather App
 permalink: "projects/a-weather-app/"
-medium-url:
-  - https://www.medium.com
-  - https://www.google.com
+featured-posts: a-weather-app
 ---
-<section class="pa5-l pa4 flex-ns items-center">
-  <div class="tl w-75-ns">
-    <h1 class="f2 near-black lh-title">A Weather App</h2>
-    <p class="f4 tl lh-copy mid-gray">Our 'Hello World' for Pixels in Progress. To get the ball rolling, we tackled a weather app to end all weather apps.</p>
-    <div class="mv3 db">
-      <a class="link f3 pv3 ph3 bn bg-pip-purple btn-hover bg-animate bit-potion white pointer" href="#0">CHECK IT OUT</a>
+<div class="vh-75 cover bg-left bg-center-ns mb4" style="background-image: url(http://mrmrs.github.io/photos/u/011.jpg);">
+  <div class="bg-white-80 vh-75 w-100 dt">
+    <div class="cf pa5-l pa4 dtc v-mid tl tc-ns">
+      <h1 class="f2 tl near-black lh-title tl tc-ns">Hello World</h1>
+      <p class="f4 tl lh-copy mid-gray tl tc-ns">A React based weather app using OpenWeatherMap and Unsplash.</p>
+      <div class="mv2 dib tl tc-ns">
+        <div class="w-100 w-auto-ns mr0 mr1-ns mb2 mb0-ns link f3 pv3 ph3 ba bw1 dib border-box btn-hover-b bg-animate bit-potion pip-purple pointer fl" href="#0">VIEW ON GITHUB</div>
+        <div class="w-100 w-auto-ns ml0 ml1-ns link f3 pv3 ph3 ba bw1 dib border-box b--pip-purple bg-pip-purple btn-hover bg-animate bit-potion white pointer fl cf" href="#0">VIEW ON CHROME WEB STORE</div>
+      </div>
     </div>
-    {% include featured-posts.html %}
-
   </div>
-  <div class="mw6">
-    <img src="http://tachyons.io/img/iPhone7Vertical.jpg">
-  </div>
-</section>
+</div>
+<div>
+<div class="pa4 pt0-l ph0-l pb5-l measure-ultra-wide center">
+  <article class="bg-white">
+    <div class="pt1">
+      <h1 class="f2 tl near-black lh-title">Overview</h1>
+      <p class="f4 tl lh-copy mid-gray">We’re a couple of designers from Baltimore, Maryland learning to build the products that we’ve always just designed. We’ve done all the researching, wireframing, and mocking up. And, although our prototypes look like the final thing, they aren't. So we’re learning to code, develop, and build whatever we design.</p>
+    </div>
+    <div class="pt1">
+      <h1 class="f2 tl near-black lh-title">Process</h1>
+      <p class="f4 tl lh-copy mid-gray">We’re a couple of designers from Baltimore, Maryland learning to build the products that we’ve always just designed. We’ve done all the researching, wireframing, and mocking up. And, although our prototypes look like the final thing, they aren't. So we’re learning to code, develop, and build whatever we design.</p>
+    </div>
+    <div class="pt1">
+      <h1 class="f2 tl lh-copy pip-purple-light">From the blog</h1>
+      {% assign featuredPosts = site.posts | where: 'featured', 'a-weather-app' %}
+      {% for post in featuredPosts %}
+      <ul class="list pl0 mb0 bb b--light-gray pointer">
+        <a class="db no-underline near-black dim" href="{{ post.medium-url }}">
+          <li class="pv0">
+            <h1 class="f4 pa0 mb0">{{ post.title | escape }}</h1>
+            {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+            <span class="f3 bit-potion pip-purple mb2 dib">{{ post.date | date: '%B %d, %Y' | upcase }}</span>
+          </li>
+        </a>
+      </ul>
+      {% endfor %}
+    </div>
+    <div class="pt5 dib tl tc-ns">
+      <div class="w-100 w-auto-ns mr0 mr1-ns mb2 mb0-ns link f3 pv3 ph3 ba bw1 dib border-box btn-hover-b bg-animate bit-potion pip-purple pointer fl" href="/">VIEW MORE PROJECTS</div>
+    </div>
+  </article>
+</div>

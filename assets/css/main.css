@@ -46,7 +46,6 @@ ADDONS
 2.) COLOR
 **********/
 
-
 .pip-purple-light, .hover-pip-purple-light:hover {
   color: #6976FE;
 }
@@ -63,6 +62,14 @@ ADDONS
   background-color: #202EBA;
 }
 
+.b--pip-purple {
+  border-color: #202EBA;
+}
+
+.b--pip-purple:hover {
+  border-color: #0A1796;
+}
+
 .pip-purple-dark, .hover-pip-purple-dark:hover {
   color: #0A1796;
 }
@@ -76,13 +83,26 @@ ADDONS
 3.) INTERACTIONS
 **********/
 
-.btn-hover {
+/* page fade */
+@-webkit-keyframes fade { from{opacity: 0} to {opacity: 1} }
+@keyframes fade fade { from{opacity: 0} to {opacity: 1} }
+.fade-body { -webkit-animation: fade 1s ease-in-out }
+
+.btn-hover, .btn-hover-b {
   box-shadow: 0 0 0 0 rgba(11,23,150,.0);
   transition: all .25s ease-in-out;
 }
 
 .btn-hover:hover {
   background-color: #0A1796;
+  box-shadow: 2px 6px 10px 0 rgba(11,23,150,.45);
+  transition: all .25s ease-in-out;
+}
+
+.btn-hover-b:hover {
+  border-color: #0A1796;
+  background-color: #0A1796;
+  color: #FFFFFF;
   box-shadow: 2px 6px 10px 0 rgba(11,23,150,.45);
   transition: all .25s ease-in-out;
 }
