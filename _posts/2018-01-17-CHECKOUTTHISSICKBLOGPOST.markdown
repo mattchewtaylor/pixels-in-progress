@@ -1,6 +1,6 @@
 ---
-title:  "Test blog post"
-date:   2018-01-17  
+title:  "A simple weather app with React"
+date:   2018-03-12  
 featured: a-weather-app
-medium-url: https://www.medium.com
+medium-url: https://medium.com/pixels-in-progress/a-simple-weather-app-with-react-16a49e89b539
 ---
